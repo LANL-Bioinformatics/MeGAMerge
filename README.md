@@ -37,7 +37,7 @@ Options:
 
 -minIncludeLen=NN      Minimum length to include in minimus assembly (default, 200)
 
--d=1                   Turns on debug information
+-d                     Turns on debug information
 
 -single_genome=1       Runs assuming single genome, reducing auto-options
                        (one newbler run, exclude fewer contigs, overrides -minLen and minIncludeLen)
