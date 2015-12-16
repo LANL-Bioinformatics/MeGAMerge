@@ -14,8 +14,8 @@ You will need to have the following tools installed and in $PATH, or added to $b
 
 MeGAMerge-1.0.pl [options] output_directory <list of fastas>
 
-#Options:
-`
+##Options:
+
 -overlap=NN            Parameter for minimum overlap length in minimus2/Newbler (default = 80)
 
 -minID=NN              Minimum % identity for overlap in minimus2/Newlber (default 98)
@@ -38,7 +38,7 @@ MeGAMerge-1.0.pl [options] output_directory <list of fastas>
 
 -single_genome=1       Runs assuming single genome, reducing auto-options
                        (one newbler run, exclude fewer contigs, overrides -minLen and minIncludeLen)
-`
+
 
 ##Citation
 Please cite:
