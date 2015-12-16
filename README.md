@@ -42,6 +42,7 @@ MeGAMerge-1.0.pl [options] output_directory <list of fastas>
 
 ##Citation
 Please cite:
-###Scholz, M., Lo, C.-C., & Chain, P. S. G. (2014). Improved Assemblies Using a Source-Agnostic Pipeline for MetaGenomic Assembly by Merging (MeGAMerge) of Contigs. Scientific Reports, 4, 6480. Retrieved from http://dx.doi.org/10.1038/srep06480
+
+Scholz, M., Lo, C.-C., & Chain, P. S. G. (2014). Improved Assemblies Using a Source-Agnostic Pipeline for MetaGenomic Assembly by Merging (MeGAMerge) of Contigs. Scientific Reports, 4, 6480. Retrieved from http://dx.doi.org/10.1038/srep06480
 
 if you use this software for your publications
