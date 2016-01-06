@@ -96,7 +96,11 @@ my $newblerMax = 10000000;
 #first line in command must be directory
 $dir = shift @ARGV;
 
-$outfile= "$dir/$outfile";
+if ( -e $dir && ! -d $dir){
+    print "The $dir is an existed file, not a directory."; Usage();
+}
+
+$outfile= "$dir/". basename($outfile);
 unless (-e $dir){
 	mkdir $dir;
 }
