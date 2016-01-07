@@ -101,6 +101,10 @@ if ( -e $dir && ! -d $dir){
 }
 
 $outfile= "$dir/". basename($outfile);
+
+print qx/ps -o args $$/ if ($debug);
+print "The Merged FASTA will be stored in $outfile\n" if ($debug);
+
 unless (-e $dir){
 	mkdir $dir;
 }
