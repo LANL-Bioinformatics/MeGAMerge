@@ -36,6 +36,8 @@ MeGAMerge-1.0.pl [options] output_directory <list of fastas>
 
 -d                     Turns on debug information
 
+-force                 Force overwrite of previous runs.  
+
 -single_genome=1       Runs assuming single genome, reducing auto-options
                        (one newbler run, exclude fewer contigs, overrides -minLen and minIncludeLen)
 
