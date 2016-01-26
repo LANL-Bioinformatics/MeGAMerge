@@ -10,6 +10,16 @@ You will need to have the following tools installed and in $PATH, or added to $b
 - Newbler (specifically runAssembly)
 - Minimus2 (part of AMOS, also requires MUMmer)
 
+###Installation notes:
+MUMmer:
+For larger genome projects, the MUMmer package must be compiled in 64 bit mode.  This can be accomplished using:
+make all CPPFLAGS="-O3 -DSIXTYFOURBITS"
+
+AMOS:
+amos tools must be able to find nucmer, delta-filter and show-coords as compiled above, either added to the path, or using the variables:
+NUCMER,DELTAFILTER, and SHOWCOORDS when running ./configure in the amos directory.
+
+
 ##Usage:
 
 MeGAMerge-1.0.pl [options] output_directory <list of fastas>
