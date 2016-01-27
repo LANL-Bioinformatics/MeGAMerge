@@ -16,8 +16,11 @@ For larger genome projects, the MUMmer package must be compiled in 64 bit mode. 
 make all CPPFLAGS="-O3 -DSIXTYFOURBITS"
 
 AMOS:
-amos tools must be able to find nucmer, delta-filter and show-coords as compiled above, either added to the path, or using the variables:
-NUCMER,DELTAFILTER, and SHOWCOORDS when running ./configure in the amos directory.
+For installation of AMOS, AMOS tools must be able to find nucmer, delta-filter and show-coords as compiled above, either by adding it  to the path before running ./configure
+Or by specifying variables:
+NUCMER,DELTAFILTER, and SHOWCOORDS when running ./configure in the amos directory. 
+Example:
+./configure NUCMER=/usr/local/bin/nucmer/bin/nucmer --prefix /usr/local/amos
 
 
 ##Usage:
