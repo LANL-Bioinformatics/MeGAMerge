@@ -29,7 +29,7 @@ Example:
 
 Minimus2 (Required changes):
 
-To take advantabe of the mutiple threads for the nucmer alignments step of Minimus2, we provide a custom minimus2 script, minimus2_nucmer_multithreads, which needs modify the AMOS installation path before using it.
+To take advantabe of the mutiple threads for the nucmer alignments step of Minimus2, we provide a custom minimus2 script, [minimus2_nucmer_multithreads] (https://github.com/LANL-Bioinformatics/MeGAMerge/blob/dev/minimus2_nucmer_multithreads), which needs modify the AMOS installation path before using it.
 The following lines are path to above tools, users need to change the path to corresponding installed path. Usually, the tool path can be found by `which` command if they are in your environment $PATH variable. (ex: `which nucmer`)
 
     line 1: #!/PATH/to/AMOS-3.1.0/bin/runAmos -C
