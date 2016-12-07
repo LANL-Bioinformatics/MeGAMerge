@@ -7,8 +7,11 @@ MeGAMerge is a perl based wrapper/tool that can accept any number of sequence (F
 ##Requirements:
 You will need to have the following tools installed and in $PATH, or added to $binpath in the tool:
 
-- Newbler (specifically runAssembly)
-- Minimus2 (part of AMOS, also requires MUMmer)
+- [Newbler (specifically runAssembly)] (http://www.454.com/products/analysis-software/)
+- [Minimus2 (part of AMOS, also requires MUMmer)] (http://amos.sourceforge.net/wiki/index.php/AMOS)
+
+And a Perl module for Parallel nucmer script we developed for speeding up minimus2.
+- [Parallel::ForkManager module from CPAN] (http://search.cpan.org/~yanick/Parallel-ForkManager-1.19/lib/Parallel/ForkManager.pm)
 
 ###Installation notes:
 MUMmer:
@@ -22,10 +25,21 @@ NUCMER,DELTAFILTER, and SHOWCOORDS when running ./configure in the amos director
 Example:
 ./configure NUCMER=/usr/local/bin/nucmer/bin/nucmer --prefix /usr/local/amos
 
+Minimus2 (Required changes):
+To take advantabe of the mutiple threads for the nucmer alignments step of Minimus2, we provide a custom minimus2 script, minimus2_nucmer_multithreads, which needs modify the AMOS installation path before using it.
+The following lines are path to above tools, users need to change the path to corresponding installed path. Usually, the tool path can be found by `which` command if they are in your environment $PATH variable. (ex: `which nucmer`)
+
+    line 1: #!/PATH/to/AMOS-3.1.0/bin/runAmos -C
+
+    line 46: BINDIR=/PATH/to/AMOS-3.1.0/bin
+    line 47: NUCMER=/PATH/to/nucmer
+    line 48: DELTAFILTER=/PATH/to/delta-filter
+    line 49: SHOWCOORDS=/PATH/to/show-coords
+ 
 
 ##Usage:
 
-MeGAMerge-1.0.pl [options] output_directory <list of fastas>
+MeGAMerge-1.2.pl [options] output_directory <list of fastas>
 
 ##Options:
 
