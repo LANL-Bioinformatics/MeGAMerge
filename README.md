@@ -15,10 +15,12 @@ And a Perl module for Parallel nucmer script we developed for speeding up minimu
 
 ###Installation notes:
 MUMmer:
+
 For larger genome projects, the MUMmer package must be compiled in 64 bit mode.  This can be accomplished using:
 make all CPPFLAGS="-O3 -DSIXTYFOURBITS"
 
 AMOS:
+
 For installation of AMOS, AMOS tools must be able to find nucmer, delta-filter and show-coords as compiled above, either by adding it  to the path before running ./configure
 Or by specifying variables:
 NUCMER,DELTAFILTER, and SHOWCOORDS when running ./configure in the amos directory. 
@@ -26,6 +28,7 @@ Example:
 ./configure NUCMER=/usr/local/bin/nucmer/bin/nucmer --prefix /usr/local/amos
 
 Minimus2 (Required changes):
+
 To take advantabe of the mutiple threads for the nucmer alignments step of Minimus2, we provide a custom minimus2 script, minimus2_nucmer_multithreads, which needs modify the AMOS installation path before using it.
 The following lines are path to above tools, users need to change the path to corresponding installed path. Usually, the tool path can be found by `which` command if they are in your environment $PATH variable. (ex: `which nucmer`)
 
